@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Senior Design | Cummins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+
+
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 18px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+	.row a{
+		font-size: 18px;
+	}
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 600px;
+      background-color: #000;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 150px;
+      min-width: 50%;
+      height: 400px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 900px;
+      /*padding: 0 620px;*/
+      padding-left: 450px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+      background-color:#000000;
+    }
+    .marketing h2 {
+      font-weight: normal;
+      font-size: 50px;
+    }
+
+    .marketing h3 {
+      font-weight: normal;
+      font-size: 20px;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+
+    div.relative {
+      position: relative;
+      top: 0px;
+      left: 100px;
+      right: auto;
+      height: "50%";
+      width: "50%";
+
+    }
+
+    div.relative2 {
+      position: relative;
+      top: -500px;
+      left: 325px;
+      height: 504px;
+      width: 60%;
+
+    }
+
+    div.relative3 {
+      position: relative;
+      top: 0px;
+      left: 0;
+      right: auto;
+
+    }
+
+    div.relative4 {
+      position: relative;
+      top: -400px;
+      left: 200px;
+      height: 504px;
+      width: 80%;
+
+    }
+
+    div.relative5 {
+      position: relative;
+      top: 0px;
+      left: -250px;
+      right: auto;
+    }
+
+    div.relative6 {
+      position: relative;
+      top: -250px;
+      left: 200px;
+      height: 504px;
+      width: 80%;
+    }
+        footer {
+          position: relative;
+          bottom:-200px;
+        	padding-bottom: 0%;
+          left: -50%;
+        	display: inline-grid;
+        	height: 80px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px !important;
+        	text-align: center;
+          width: 200%;
+        }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+		  <nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Manifold Tuning</a>
+			  </div>
+			  <div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+				  <li><a href="about.html">About</a></li>
+				  <li class="active"><a href="contributors.html">Meet The Team</a></li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/ferrari2.jpg" alt="">
+          <div class="container">
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/engine.jpg" alt="" height="50">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1></h1>
+              <p class="lead"></p>
+            </div>
+          </div>
+        </div>
+        <div class="item"  height="5%">
+          <img src="img/engine2.jpg" alt="" height="5%">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1></h1>
+              <p class="lead"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+
+
+      <div class="row">
+          <img class="img-circle" src="img/sg-1.jpg" alt="Generic placeholder image" width="31%" height="31%" align="left" hspace="20">
+          <h2>Stanko Gutalj</h2>
+          <p>  sg11j@my.fsu.edu.<br><br>
+            Stanko Gutalj is currently a Systems Engineer at Siemens Building Technologies as well as a research assistant at the Florida Center for Advanced Aero-Propulsion.  He was born in Belgrade, Serbia, and came to the United States in 1998 as a refugee from the Bosnian Civil War. Stanko's admiration of his fellow countrymen Nikola Tesla (undoubtedly the greatest scientist ever), led him to develop a passion for Physics and Mathematics; this led him to pursue a degree in Mechanical Engineering.  Stanko is currently involved in an ongoing research investigation on the control of trailing edge vortices under the guidance of Dr. Louis Cattafesta and Adam Edstrand.  His contributions include the design of a structural support column for an NACA0012 airfoil and an automated turntable system for precise angular control for wind tunnel testing.  In his leisure time, Stanko is an avid fan of several unsuccessful sports teams primarily the Jacksonville Jaguars and the Los Angeles Lakers. This upcoming summer, Stanko is beggining the Engineering Development Program with Siemens, where he will begin his career with the Power and Gas division of Siemens Energy.   <br>
+            </p>
+          <br><br /><br /><br /><br />
+	  <br /><br />
+	  <!-- /.col-lg-4 -->
+          <img class="img-circle" src="img/nando.jpg" alt="Generic placeholder image" width="31%" height="31%" align="left" hspace="20"><br /><br />
+          <h2>Fernando Rodriguez</h2>
+          <p>fr12c@my.fsu.edu.<br><br>
+          Fernando Rodriguez currently senior undergraduate student on Mechanical Engineering (ME) from Florida State University (FSU). Born and raised in Cuba, came to the United State of America at the age of fourteen. Pursuing his goal in science let him be a part of Miami Dade College from 2010 to 2012. Transfer to Florida State University to continue his studies as undergraduate ME from 2012 up to 2016. Had opportunity to be a part of Florida Center for Advanced Aero-Propulsion (FCAAP) as research assistance during the Summer 2015. Helped and learned from graduate students with new experiment with Particle Image Velocimetry (PIV) in the supersonic, and subsonic wind tunnel facility. As of Fall 2015 Fernando is working under Dr. Kumar's research for Asymmetric Vortex Control of Slender Body at High Angle of Incidence. Also, working on Variable Angle Target Training System (VATTS) for Senior Design, sponsored by Lockheed Martin.</p>
+        </div><!-- /.col-lg-4 -->
+                  <br><br />
+
+           <img class="img-circle" src="img/gr-1.jpg" alt="Generic placeholder image" width="31%" height="31%" align="left" hspace="20"><br /><br />
+
+          <h2>Grady Beasley</h2>
+          <p>gob12@my.fsu.edu<br><br>
+          Grady is currently a senior Mechanical Engineering student at the FSU-FAMU College of Engineering. He is on track to graduate in the spring of 2016 with a specialization in aeronautics and a minor in mathematics. Outside of his studies, Grady spends his time doing various hands-on projects, working on anything with a motor, and playing the drums. After graduation he plans to move to the west coast to capitalize on mechanical engineering knowledge and explore entrepreneurial prospects.</p>
+
+        </div><!-- /.col-lg-4 -->
+              <div class="row">
+
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+	  <!-- FOOTER -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="../assets/js/holder/holder.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+  <footer>
+    <p class="pull-right"><a href=#000 align="bottom">Back to top</a></p>
+    <p>Intro. to Propulsions &copy; 2016 Florida State University &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</html>
